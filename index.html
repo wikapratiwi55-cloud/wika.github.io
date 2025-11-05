@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+
+    <form action="/proses-pendaftaran" method="post">
+        <div class="form-group">
+            <label for="nama-lengkap">Nama Lengkap:</label>
+            <input type="text" id="nama-lengkap" name="nama_lengkap" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Alamat Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tanggal-lahir">Tanggal Lahir:</label>
+            <input type="date" id="tanggal-lahir" name="tanggal_lahir" required>
+        </div>
+
+        <div class="form-group">
+            <label for="program-studi">Pilih Program Studi:</label>
+            <select id="program-studi" name="program_studi" required>
+                <option value="">--Pilih Program Studi--</option>
+                <option value="ti">Teknik Informatika</option>
+                <option value="si">Sistem Informasi</option>
+                <option value="dkv">Desain Komunikasi Visual</option>
+                <option value="mi">Manajemen Informatika</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" required>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Daftar Sekarang</button>
+        </div>
+    </form>
+
+</body>
+</html>
